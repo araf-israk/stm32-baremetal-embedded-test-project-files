@@ -1,0 +1,16 @@
+/*
+ * gy521.h
+ *
+ *  Created on: Jan 22, 2025
+ *      Author: arafi
+ */
+
+#ifndef GY521_H_
+#define GY521_H_
+
+#include "i2c.h"
+
+#define DEVID_R      0x75
+#define DEVICE_ADDR  (0x68)
+
+#endif /* GY521_H_ */

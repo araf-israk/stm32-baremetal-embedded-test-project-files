@@ -1,0 +1,32 @@
+#include "exti.h"
+
+#define GPIOAEN 			(1U<<0)
+#define SYSCFGEN 			(1U<<14)
+
+void pa0_exti_init(void){
+
+	/*Disable global interrupts*/
+	__disable_irq();
+
+	/*Enable clock access for GPIOA*/
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/*Set PA0 as inputs*/
+	GPIOA->MODER &= ~(1U<<0);
+	GPIOA->MODER &= ~(1U<<1);
+
+	/*Set PA0 as pull up*/
+	GPIOA->PUPDR |=  (1U<<0);
+	GPIOA->PUPDR &= ~(1U<<1);
+
+	/*Enable clock access to SYSCFG*/
+	RCC->APB2ENR |= SYSCFGEN;
+
+	/*Select PORT for EXTI0*/
+	/*Unmask EXTI0*/
+	/*Select falling edge trigger*/
+	/*Enable EXTI0 line in NVIC*/
+	/*Enable global interrupts*/
+	__enable_irq();
+
+}

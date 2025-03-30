@@ -1,0 +1,14 @@
+/*
+ * gy521.h
+ *
+ *  Created on: Jan 22, 2025
+ *      Author: arafi
+ */
+
+#ifndef GY521_H_
+#define GY521_H_
+
+#include "i2c.h"
+
+
+#endif /* GY521_H_ */

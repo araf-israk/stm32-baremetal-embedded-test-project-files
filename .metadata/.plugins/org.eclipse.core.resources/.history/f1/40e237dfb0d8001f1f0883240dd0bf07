@@ -1,0 +1,14 @@
+/*
+ * spi.c
+ *
+ *  Created on: Jan 22, 2025
+ *      Author: arafi
+ */
+
+
+#include "spi.h"
+
+
+void spi_gpio_init(void){
+
+}

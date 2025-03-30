@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adc.h"
+
+
+uint32_t sensor_reading;
+
+int main(void){
+
+
+	uart2_rxtx_init();
+	pa1_adc_interrupt_init();
+	start_conversion();
+
+	while(1){
+
+		sensor_reading = adc_read();
+	}
+}
+
+void ADC_IRQHandler(void){
+	/*Check for EOC in SR*/
+	if(ADC1->SR)
+}
+
+
+
+

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+#include "exti.h"
+
+
+int main(void){
+
+	pa0_exti_init();
+
+	while(1){
+
+
+	}
+}
+
+static void exti_callback(void){
+
+}
+
+void EXTI0_IRQHandler(void){
+	if((EXTI->PR & LINE0)!=0){
+		/*Clear PR flag*/
+		EXTI->PR |= LINE0;
+
+	}
+}

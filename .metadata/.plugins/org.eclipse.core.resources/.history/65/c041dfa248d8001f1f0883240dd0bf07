@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "gy521.h"
+
+#define GPIOCEN (1U<<2)
+#define PIN13 	(1U<<13)
+
+#define LED_PIN PIN13
+
+extern uint8_t data_rec[6];
+
+int main(void){
+	I2C1_init();
+
+	adxl_init();
+
+	while(1){
+
+	}
+}

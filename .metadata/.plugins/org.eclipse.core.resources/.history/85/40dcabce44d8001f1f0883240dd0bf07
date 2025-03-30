@@ -1,0 +1,7 @@
+
+#include "gy521.h"
+
+
+void adx1_read_address(uint8_t reg){
+	I2C1_byteRead(DEVICE_ADDR, maddr, data)
+}

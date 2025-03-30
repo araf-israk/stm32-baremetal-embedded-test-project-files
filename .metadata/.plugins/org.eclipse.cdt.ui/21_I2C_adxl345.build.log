@@ -1,0 +1,36 @@
+16:23:58 **** Build of configuration Debug for project 21_I2C_adxl345 ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
+arm-none-eabi-gcc "../Src/adxl345.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adxl345.d" -MT"Src/adxl345.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adxl345.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/21_I2C_adxl345/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/i2c.c: In function 'I2C1_byteRead':
+../Src/i2c.c:88:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+   88 |       volatile int tmp;
+      |                    ^~~
+../Src/i2c.c: In function 'I2C1_burstRead':
+../Src/i2c.c:144:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  144 |         volatile int tmp;
+      |                      ^~~
+../Src/i2c.c: In function 'I2C1_burstWrite':
+../Src/i2c.c:226:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  226 |         volatile int tmp;
+      |                      ^~~
+arm-none-eabi-gcc -o "21_I2C_adxl345.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Projects\Embedded Systems BM GU Course\21_I2C_adxl345\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="21_I2C_adxl345.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: 21_I2C_adxl345.elf has a LOAD segment with RWX permissions
+Finished building target: 21_I2C_adxl345.elf
+ 
+arm-none-eabi-size  21_I2C_adxl345.elf 
+arm-none-eabi-objdump -h -S 21_I2C_adxl345.elf  > "21_I2C_adxl345.list"
+   text	   data	    bss	    dec	    hex	filename
+   3576	      8	   1608	   5192	   1448	21_I2C_adxl345.elf
+Finished building: default.size.stdout
+ 
+Finished building: 21_I2C_adxl345.list
+ 
+
+16:23:59 Build Finished. 0 errors, 4 warnings. (took 922ms)
+

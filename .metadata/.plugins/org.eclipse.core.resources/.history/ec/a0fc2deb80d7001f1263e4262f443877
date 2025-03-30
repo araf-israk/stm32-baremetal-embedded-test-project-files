@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+
+
+#define GPIOCEN (1U<<2)
+
+#define PIN13 	(1U<<13)
+
+#define LED_PIN PIN13
+
+int main(void){
+
+
+	uart2_rxtx_init();
+
+	RCC->AHB1ENR |= GPIOCEN;
+
+	GPIOC->MODER |= (1U<<26);
+	GPIOC->MODER &= ~(1U<<27);
+
+	tim2_1hz_init();
+
+	while(1){
+		GPIOC->ODR ^= LED_PIN;
+		systickDelayMS(100);
+	}
+}
+
+
+
+

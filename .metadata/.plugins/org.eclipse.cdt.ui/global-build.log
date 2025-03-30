@@ -1,0 +1,44 @@
+20:16:17 **** Build of configuration Debug for project 22_SPI_adxl346 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/adxl345.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adxl345.d" -MT"Src/adxl345.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adxl345.o"
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -DSTM32F411xE -c -I../Inc -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32Projects/Embedded Systems BM GU Course/22_SPI_adxl346/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/i2c.c: In function 'I2C1_byteRead':
+../Src/i2c.c:88:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+   88 |       volatile int tmp;
+      |                    ^~~
+../Src/i2c.c: In function 'I2C1_burstRead':
+../Src/i2c.c:144:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  144 |         volatile int tmp;
+      |                      ^~~
+../Src/i2c.c: In function 'I2C1_burstWrite':
+../Src/i2c.c:226:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  226 |         volatile int tmp;
+      |                      ^~~
+../Src/spi.c: In function 'spi1_transmit':
+../Src/spi.c:98:17: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   98 |         uint8_t temp;
+      |                 ^~~~
+arm-none-eabi-gcc -o "22_SPI_adxl346.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32Projects\Embedded Systems BM GU Course\22_SPI_adxl346\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="22_SPI_adxl346.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: 22_SPI_adxl346.elf has a LOAD segment with RWX permissions
+Finished building target: 22_SPI_adxl346.elf
+ 
+arm-none-eabi-size  22_SPI_adxl346.elf 
+arm-none-eabi-objdump -h -S 22_SPI_adxl346.elf  > "22_SPI_adxl346.list"
+   text	   data	    bss	    dec	    hex	filename
+   3228	      8	   1608	   4844	   12ec	22_SPI_adxl346.elf
+Finished building: default.size.stdout
+ 
+Finished building: 22_SPI_adxl346.list
+ 
+20:16:40 **** Incremental Build of configuration Debug for project 22_SPI_adxl346 ****
+make -j16 all 
+arm-none-eabi-size  22_SPI_adxl346.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3228	      8	   1608	   4844	   12ec	22_SPI_adxl346.elf
+Finished building: default.size.stdout
+ 

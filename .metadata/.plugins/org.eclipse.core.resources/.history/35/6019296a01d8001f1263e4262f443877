@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+#include "exti.h"
+
+char key;
+
+int main(void){
+
+	uart2_rx_interrupt_init();
+
+	while(1){
+		key = uart2_read();
+		if(key == '1'){
+			GPIOC->ODR |= LED_PIN;
+		}
+		else{
+			GPIOC->ODR &= ~LED_PIN;
+		}
+
+	}
+}
+
+
+void USART2_IRQHandler(void){
+
+}

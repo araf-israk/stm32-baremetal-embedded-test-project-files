@@ -1,0 +1,13 @@
+
+
+#define ADC1EN 		(1U<<8)
+
+
+
+
+
+
+
+void pa1_adc_init(void){
+
+}

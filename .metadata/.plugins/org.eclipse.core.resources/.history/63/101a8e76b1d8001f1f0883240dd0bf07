@@ -1,0 +1,36 @@
+#include "spi.h"
+
+#define SPI1EN				(1U<<12)
+#define GPIOAEN 			(1U<<0)
+
+/*
+ * PA5 ==== SCLK
+ * PA6 ==== MISO
+ * PA7 ==== MOSI
+ * PA9 ==== SS
+ *
+ * */
+
+void spi_gpio_init(void){
+
+	/*Enable clock access to GPIOA*/
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/*Set PA5, PA6, PA7 mode to alternate function*/
+
+	/*PA5*/
+	GPIOA->MODER &=~(1U<<10);
+	GPIOA->MODER |= (1U<<11);
+
+	/*PA6*/
+	GPIOA->MODER &=~(1U<<12);
+	GPIOA->MODER |= (1U<<13);
+
+	/*PA7*/
+	GPIOA->MODER &=~(1U<<14);
+	GPIOA->MODER |= (1U<<15);
+
+	/*Set PA9 as output pin*/
+	GPIOA->MODER |=(1U<<18);
+	GPIOA->MODER &=~(1U<<19);
+}

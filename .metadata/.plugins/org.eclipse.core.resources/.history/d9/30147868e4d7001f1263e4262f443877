@@ -1,0 +1,6 @@
+#include "exti.h"
+
+
+void pa0_exti_init(void){
+
+}

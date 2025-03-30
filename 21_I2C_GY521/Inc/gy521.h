@@ -1,0 +1,22 @@
+/*
+ * gy521.h
+ *
+ *  Created on: Jan 22, 2025
+ *      Author: arafi
+ */
+
+#ifndef GY521_H_
+#define GY521_H_
+
+#include "i2c.h"
+#include <stdint.h>
+
+#define DEVID_R      0x75
+#define DEVICE_ADDR  (0x68)
+
+void adxl_read_address(uint8_t reg);
+void adxl_write(uint8_t reg, char value);
+void adxl_read_values(uint8_t reg);
+void adxl_init(void);
+
+#endif /* GY521_H_ */
